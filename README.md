@@ -1,3 +1,8 @@
+﻿Diego Alejandro Roldán Parrado 47412
+______________________________________________________________________________
+
+
+
 # lab05 : Unidad de suma, resta, multiplicación, división y visualización BCD
 ## Introducción
 
