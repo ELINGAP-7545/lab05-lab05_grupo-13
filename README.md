@@ -71,6 +71,11 @@ Imagen de como usar la FPGA
 
 ![WhatsApp Image 2020-04-23 at 10 14 38 PM](https://user-images.githubusercontent.com/62714712/80264470-df03c900-8659-11ea-8aa1-e4b25b8c0d1c.jpeg)
 
+Se toman los 10 switch, y se dividen en dos;
+De ahí parte todas las operaciones, cuando no le doy operación, el me muestra los números de los switch 
+
+
+![partiendo](https://user-images.githubusercontent.com/62714712/80264739-b0d2b900-865a-11ea-8f49-cd794126ad26.png)
 
 La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación.
 
