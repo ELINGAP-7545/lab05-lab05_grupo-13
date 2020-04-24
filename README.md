@@ -64,6 +64,7 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 SOLUCION LAB5 
 ________________________________________________________________________________________________________________________________
 Diagrama Estructural de la SUMA.
+
 ![Sumador](https://user-images.githubusercontent.com/62714712/80239337-ac3fdd80-8625-11ea-9c20-ee2d953edb7e.png)
 
 Caja Negra de 3 bits
@@ -73,6 +74,10 @@ Caja Negra de 3 bits
 Instanciamiento de 3 bits 
 
 ![sumador3bits](https://user-images.githubusercontent.com/62714712/80239338-acd87400-8625-11ea-9ad2-5c5185210bfc.png)
+
+Diagrama De Flujo
+
+![Proceso de soporte técnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
 
 
  
