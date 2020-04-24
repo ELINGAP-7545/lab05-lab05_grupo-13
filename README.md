@@ -90,6 +90,9 @@ La caja funcional o caja negra tiene como entradas multiplicando y el multiplica
 
 ![multiplicador 1](https://user-images.githubusercontent.com/62735033/80259075-5c274200-864a-11ea-86d6-7213e712b1ae.png)
 
+Descripción funcional
+
+![descripcion multiplicador](https://user-images.githubusercontent.com/62735033/80259868-2edb9380-864c-11ea-8324-6246cf336cdd.png)
 
 
 
