@@ -82,5 +82,16 @@ Diagrama De Flujo
 
 ![Proceso de soporte tÃ©cnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
 
+Multiplicación 
+
+Descripción de la caja negra 
+
+La caja funcional o caja negra tiene como entradas multiplicando y el multiplicador (A y B), señales de m bits cada una. la salida es el resultado de la multiplicación PP (Bus de 2m Bits). Además, la señal de reloj (CLOCK), entrada. Las señales INIT y DONE, entrada y salida, se utilizan para iniciar el proceso de multiplicación e indicar que el resultado está a disponible respectivamente
+
+![multiplicador 1](https://user-images.githubusercontent.com/62735033/80259075-5c274200-864a-11ea-86d6-7213e712b1ae.png)
+
+
+
+
 
  
