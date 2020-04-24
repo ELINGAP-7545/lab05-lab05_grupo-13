@@ -67,6 +67,11 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
 SOLUCION LAB5 
 ________________________________________________________________________________________________________________________________
 
+Imagen de como usar la FPGA
+
+![WhatsApp Image 2020-04-23 at 10 14 38 PM](https://user-images.githubusercontent.com/62714712/80264470-df03c900-8659-11ea-8aa1-e4b25b8c0d1c.jpeg)
+
+
 La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación.
 
 Opcode:Las posibles operaciones arimeticas que se pueden ejecutar en la ALU.
