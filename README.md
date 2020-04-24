@@ -1,7 +1,10 @@
 Arquitectura
  
 Diego Alejandro Roldán Parrado 47412
+
 Yonalid Martinez Chiquillo 56202
+
+Andres Beltran 83724
 ______________________________________________________________________________
 
 
