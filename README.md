@@ -96,6 +96,12 @@ Diagrama De Flujo
 
 ![Proceso de soporte tÃ©cnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
 
+Simulacion de la Suma en Labsland
+
+![suma](https://user-images.githubusercontent.com/62714712/80264594-41f56000-865a-11ea-91bc-5d2c65b4f091.png)
+
+_______________________________________________________________________________________________________________________________
+
 Multiplicación 
 
 Descripción de la caja negra 
