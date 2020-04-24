@@ -65,7 +65,8 @@ SOLUCION LAB5
 ________________________________________________________________________________________________________________________________
 Diagrama Estructural de la SUMA.
 ![Sumador](https://user-images.githubusercontent.com/62714712/80239337-ac3fdd80-8625-11ea-9c20-ee2d953edb7e.png)
-
+Caja Negra de 3 bits
+![sumador3](https://user-images.githubusercontent.com/62714712/80239725-5881c400-8626-11ea-8c2b-0549f57023b2.png)
 Instanciamiento de 3 bits 
 ![sumador3bits](https://user-images.githubusercontent.com/62714712/80239338-acd87400-8625-11ea-9ad2-5c5185210bfc.png)
 
