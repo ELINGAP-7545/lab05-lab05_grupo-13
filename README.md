@@ -1,6 +1,6 @@
 Arquitectura
  
-Diego Alejandro Roldán Parrado 47412
+Diego Alejandro RoldÃ¡n Parrado 47412
 
 Yonalid Martinez Chiquillo 56202
 
@@ -9,40 +9,40 @@ ______________________________________________________________________________
 
 
 
-# lab05 : Unidad de suma, resta, multiplicación, división y visualización BCD
-## Introducción
+# lab05 : Unidad de suma, resta, multiplicaciÃ³n, divisiÃ³n y visualizaciÃ³n BCD
+## IntroducciÃ³n
 
 
-Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la información del siguiente link [WP05](https://classroom.github.com/g/dHrBou9a). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cómo hacerlo revise la metodología de trabajo, donde se explica el proceso
+Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la informaciÃ³n del siguiente link [WP05](https://classroom.github.com/g/dHrBou9a). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cÃ³mo hacerlo revise la metodologÃ­a de trabajo, donde se explica el proceso
 
-Las documentación deben estar diligencia en el archivo README.md del repositorio clonado.
+Las documentaciÃ³n deben estar diligencia en el archivo README.md del repositorio clonado.
 
 Una vez clone el repositorio, realice lo siguiente:
 
 
-## descipción 
-La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación. 
+## descipciÃ³n 
+La unidad aritmÃ©tica, es tal que cuenta con componentes para realizar operaciones aritmÃ©ticas. cada operaciÃ³n aritmÃ©tica es ejecutada acuerdo al cÃ³digo de la operaciÃ³n. 
 
-Como ejercicio académico, se propone construye una unidad con 4 operaciones aritméticas: suma, resta, multiplicación y división.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selección de la operación se realiza acorde a la señal opcode, y segun la siguiente tabla:
+Como ejercicio acadÃ©mico, se propone construye una unidad con 4 operaciones aritmÃ©ticas: suma, resta, multiplicaciÃ³n y divisiÃ³n.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selecciÃ³n de la operaciÃ³n se realiza acorde a la seÃ±al opcode, y segun la siguiente tabla:
 
 
-opcode | operación  enteros positivos
+opcode | operaciÃ³n  enteros positivos
 00| suma
 01| resta 
-10|  multiplicación
-11| división 
+10|  multiplicaciÃ³n
+11| divisiÃ³n 
 
 Por lo tanto, la unidad debe contar con:
 
 1. Los dos puertos de entrada A y B. cada uno de  3 bits.
-2. La señal `opcode` de dos bits, para configurar la operación que se realiza con los datos de `portA` y `portB`.
-3. La a visualización de unidad debe tener las salidas de los 4 ánodos, `An`  y las 7 señales de los cátodos, `sseg`.
-4. Para las FSM  y las visualización dinámica, se debe incluir la señal de `clk` de entrada.
-5. la señal de reset del sistema
+2. La seÃ±al `opcode` de dos bits, para configurar la operaciÃ³n que se realiza con los datos de `portA` y `portB`.
+3. La a visualizaciÃ³n de unidad debe tener las salidas de los 4 Ã¡nodos, `An`  y las 7 seÃ±ales de los cÃ¡todos, `sseg`.
+4. Para las FSM  y las visualizaciÃ³n dinÃ¡mica, se debe incluir la seÃ±al de `clk` de entrada.
+5. la seÃ±al de reset del sistema
 
 ## Diagrama de caja negra
 
-Según las especificaciones anteriormente descrita, la caja funcional de la unidad aritmética propuesta es:
+SegÃºn las especificaciones anteriormente descrita, la caja funcional de la unidad aritmÃ©tica propuesta es:
 
 ![caja negra](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab06_Unidad_aritmetica/doc/cajanegra.png)
 
@@ -51,22 +51,25 @@ Según las especificaciones anteriormente descrita, la caja funcional de la unid
 
 ![estructural](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab06_Unidad_aritmetica/doc/diagraEstructural.png)
 
-El diagrama estructural, se soporta en los componentes desarrollados en los anteriores laboratorios. De esta manera,  tanto el sumador, el multiplicador  y el Display, son tomados de los lab2, lab5 y lab4  respectivamente. Adicional a la estructura de cada operación se encuentra el decodificador  y el multiplexador.
+El diagrama estructural, se soporta en los componentes desarrollados en los anteriores laboratorios. De esta manera,  tanto el sumador, el multiplicador  y el Display, son tomados de los lab2, lab5 y lab4  respectivamente. Adicional a la estructura de cada operaciÃ³n se encuentra el decodificador  y el multiplexador.
 
 ## Entregables
 
 1. Definir el diagrama estructurar interno de cada bloque funcionar 
-2. Descargar la estructura propuesta de la  Unidad Aritmética del paquete de trabajo [WP05](https://classroom.github.com/g/dHrBou9a) Este proyecto cuenta con el archivo `alu.v` y, tiene la carpeta `src` que cuenta con las 5 carpetas de cada componente.
-3. Implementar `alu.v` en la FPGA, y  comprobar el funcionamiento  de la suma la multiplicación y la visualización
+2. Descargar la estructura propuesta de la  Unidad AritmÃ©tica del paquete de trabajo [WP05](https://classroom.github.com/g/dHrBou9a) Este proyecto cuenta con el archivo `alu.v` y, tiene la carpeta `src` que cuenta con las 5 carpetas de cada componente.
+3. Implementar `alu.v` en la FPGA, y  comprobar el funcionamiento  de la suma la multiplicaciÃ³n y la visualizaciÃ³n
 4. Incluir el  HDL para le divisor  realizado en el ejercicio anterior, en la carpeta `src/divisor`  y, adicione los archivos e instanciar el bloque divisor.
-5. Diseñar el bloque restador, adicionar dicho bloque a la respectiva carpeta e instanciar el modulo en `alu.v`.
+5. DiseÃ±ar el bloque restador, adicionar dicho bloque a la respectiva carpeta e instanciar el modulo en `alu.v`.
 6. Realizar el testbench del bloque alu.
 7. implementar el sistema completo en la FPGA remota
-8. hacer la documentación respectiva en el archivo README
+8. hacer la documentaciÃ³n respectiva en el archivo README
   
 SOLUCION LAB5 
 ________________________________________________________________________________________________________________________________
 Diagrama Estructural de la SUMA.
+
+![TABLA](https://user-images.githubusercontent.com/62714712/80263655-ebd2ed80-8656-11ea-9d18-427c406b2630.png)
+
 
 ![Sumador](https://user-images.githubusercontent.com/62714712/80239337-ac3fdd80-8625-11ea-9c20-ee2d953edb7e.png)
 
@@ -80,17 +83,17 @@ Instanciamiento de 3 bits
 
 Diagrama De Flujo
 
-![Proceso de soporte técnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
+![Proceso de soporte tÃ©cnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
 
-Multiplicaci�n 
+Multiplicación 
 
-Descripci�n de la caja negra 
+Descripción de la caja negra 
 
-La caja funcional o caja negra tiene como entradas multiplicando y el multiplicador�(A y B), se�ales de�m�bits cada una. la salida es el resultado de la multiplicaci�n�PP�(Bus de 2m Bits). Adem�s, la se�al de reloj (CLOCK), entrada. Las se�ales�INIT�y�DONE, entrada y salida, se utilizan para iniciar el proceso de multiplicaci�n e indicar que el resultado est� a disponible respectivamente
+La caja funcional o caja negra tiene como entradas multiplicando y el multiplicador (A y B), señales de m bits cada una. la salida es el resultado de la multiplicación PP (Bus de 2m Bits). Además, la señal de reloj (CLOCK), entrada. Las señales INIT y DONE, entrada y salida, se utilizan para iniciar el proceso de multiplicación e indicar que el resultado está a disponible respectivamente
 
 ![multiplicador 1](https://user-images.githubusercontent.com/62735033/80259075-5c274200-864a-11ea-86d6-7213e712b1ae.png)
 
-Descripci�n funcional
+Descripción funcional
 
 ![descripcion multiplicador](https://user-images.githubusercontent.com/62735033/80259868-2edb9380-864c-11ea-8324-6246cf336cdd.png)
 
