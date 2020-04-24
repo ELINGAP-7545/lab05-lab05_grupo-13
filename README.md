@@ -66,9 +66,15 @@ El diagrama estructural, se soporta en los componentes desarrollados en los ante
   
 SOLUCION LAB5 
 ________________________________________________________________________________________________________________________________
-Diagrama Estructural de la SUMA.
+
+La unidad aritmética, es tal que cuenta con componentes para realizar operaciones aritméticas. cada operación aritmética es ejecutada acuerdo al código de la operación.
+
+Opcode:Las posibles operaciones arimeticas que se pueden ejecutar en la ALU.
+
 
 ![TABLA](https://user-images.githubusercontent.com/62714712/80263655-ebd2ed80-8656-11ea-9d18-427c406b2630.png)
+
+Diagrama Estructural de la SUMA.
 
 
 ![Sumador](https://user-images.githubusercontent.com/62714712/80239337-ac3fdd80-8625-11ea-9c20-ee2d953edb7e.png)
