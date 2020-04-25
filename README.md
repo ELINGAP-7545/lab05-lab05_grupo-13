@@ -133,11 +133,18 @@ Resta:
 
 La resta se toma usando las dos botoneras cada vez que activamos un swich dependiendo de la posicion nos va arrojar un valor que se va ver reflejado en el display teniendo estos valores el boton B1 es el responsable de realizar la resta la implementacion se realizo con la linea de codigo siguiente.
 
+Valores ingresados 
+
+![digitos](https://user-images.githubusercontent.com/62714712/80266649-a5838b80-8662-11ea-94d2-dc20df0e55fe.png)
+
 if (op2==1)
 	        if(BCD1>BCD)
 			RTA = BCD1-BCD;
 			else
 			RTA= 1000+(BCD-BCD1);
+			
+   Resultado: 
+   
    
    ![resta](https://user-images.githubusercontent.com/62714712/80266267-93085280-8660-11ea-87cd-b0357635db41.png)
 
@@ -158,6 +165,34 @@ Descripción funcional
 ![descripcion multiplicador](https://user-images.githubusercontent.com/62735033/80259868-2edb9380-864c-11ea-8324-6246cf336cdd.png)
 
 
+________________________________________________________________________________________________________________________________
+
+DIVISION:
+
+Para activar la division usamos la siguiente linea
+
+assign op3 = V_BT[2]; eso quiere que la division se activa cuando pulsamos el Boton 2
+
+Para realizar la division usamos la siguiente lineas
+
+if (op3==1)
+	        if (BCD==0)
+			RTA =0;
+			else 
+			RTA=BCD1/BCD;
+			
 
 
- 
+Valores ingresados.
+
+
+![division](https://user-images.githubusercontent.com/62714712/80266711-ea0f2700-8662-11ea-9e60-522c27074aeb.png)
+
+
+Resultado:
+
+![divisionresul](https://user-images.githubusercontent.com/62714712/80266712-ebd8ea80-8662-11ea-9cec-4ddc695a6af2.png)
+
+
+
+
