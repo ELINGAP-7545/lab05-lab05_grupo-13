@@ -276,7 +276,7 @@ CODIGO FINAL.
 
 
 
-always @ ( * ) begin
+    always @ ( * ) begin
 
      if (op1==1)
 			RTA = BCD1+BCD;
