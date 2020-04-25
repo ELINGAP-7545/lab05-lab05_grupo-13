@@ -89,22 +89,37 @@ Diagrama Estructural de la SUMA.
 
 ![Sumador](https://user-images.githubusercontent.com/62714712/80239337-ac3fdd80-8625-11ea-9c20-ee2d953edb7e.png)
 
-Caja Negra de 3 bits
 
-![sumador3](https://user-images.githubusercontent.com/62714712/80239725-5881c400-8626-11ea-8c2b-0549f57023b2.png)
-
-Instanciamiento de 3 bits 
-
-![sumador3bits](https://user-images.githubusercontent.com/62714712/80239338-acd87400-8625-11ea-9ad2-5c5185210bfc.png)
 
 Diagrama De Flujo
 
 ![Proceso de soporte tÃ©cnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
 
+Se activan los display automaticamente  y los swich de la parte superiror e inferior son los que me van arrojar un valor a los display dicho valor va ser tomado por el boton B0 y va realizar una suma para realizar la suma implementamos la linea siguiente 
+
+
+     if (op1==1)
+			RTA = BCD1+BCD;
+   
 Simulacion de la Suma en Labsland
 
 ![suma](https://user-images.githubusercontent.com/62714712/80264594-41f56000-865a-11ea-91bc-5d2c65b4f091.png)
 
+
+Resta:
+
+La resta se toma usando las dos botoneras cada vez que activamos un swich dependiendo de la posicion nos va arrojar un valor que se va ver reflejado en el display teniendo estos valores el boton B1 es el responsable de realizar la resta la implementacion se realizo con la linea de codigo siguiente.
+
+if (op2==1)
+	        if(BCD1>BCD)
+			RTA = BCD1-BCD;
+			else
+			RTA= 1000+(BCD-BCD1);
+   
+   ![resta](https://user-images.githubusercontent.com/62714712/80266267-93085280-8660-11ea-87cd-b0357635db41.png)
+
+
+   
 _______________________________________________________________________________________________________________________________
 
 Multiplicación 
