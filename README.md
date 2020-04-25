@@ -1,6 +1,6 @@
 Arquitectura
  
-Diego Alejandro RoldÃƒÂ¡n Parrado 47412
+Diego Alejandro Roldan Parrado 47412
 
 Yonalid Martinez Chiquillo 56202
 
@@ -86,20 +86,20 @@ Opcode:Las posibles operaciones arimeticas que se pueden ejecutar en la ALU.
 
 ![principio](https://user-images.githubusercontent.com/62714712/80266493-da431300-8661-11ea-9c98-7519a86c875a.png)
 
-Este cÃ³digo lo utilizamos para colocar los nÃºmeros que le ingresamos.
-Se llama la funciÃ³n y en ella se le envÃ­a informaciÃ³n, en este caso la informaciÃ³n que recibe es:
+Este codigo lo utilizamos para colocar los numeros que le ingresamos.
+Se llama la funcion y en ella se le envia informacion, en este caso la informacion que recibe es:
 A= 5bits
 B= 5 bits
 Como estÃ¡n en base hexadecimal (16), lo que se realiza es una conversiÃ³n 
 Ej: 10110 =22
 Los primero 4 se toman normal 0110 =6
 El 5 bit se multiplica por 16; si el 5 bit es 1 obtendremos 16 sino serÃ¡ 0. En este caso tenemos 0001=16
-DespuÃ©s de ello sumamos y obtenemos
+Despues de ello sumamos y obtenemos
 16+6 =22
-El mismo ejercicio se realiza con el numero b, pero este al final se multiplica por 100, si tomamos el ejemplo anterior tendrÃ­amos 22*100=2200
+El mismo ejercicio se realiza con el numero b, pero este al final se multiplica por 100, si tomamos el ejemplo anterior tendriamos 22*100=2200
 B=2200
 
-Y lo que realizamos al final es sumar los dos para obtener un solo nÃºmero
+Y lo que realizamos al final es sumar los dos para obtener un solo numero
 RTA=a+b ; 
 RTA=2200+22 
 RTA = 2222
