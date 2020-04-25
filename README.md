@@ -26,11 +26,11 @@ La unidad aritmÃƒÂ©tica, es tal que cuenta con componentes para realizar ope
 Como ejercicio acadÃƒÂ©mico, se propone construye una unidad con 4 operaciones aritmÃƒÂ©ticas: suma, resta, multiplicaciÃƒÂ³n y divisiÃƒÂ³n.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selecciÃƒÂ³n de la operaciÃƒÂ³n se realiza acorde a la seÃƒÂ±al opcode, y segun la siguiente tabla:
 
 
-opcode | operaciÃƒÂ³n  enteros positivos
+opcode | operacion enteros positivos
 00| suma
 01| resta 
-10|  multiplicaciÃƒÂ³n
-11| divisiÃƒÂ³n 
+10|  multiplicacion
+11| division
 
 Por lo tanto, la unidad debe contar con:
 
@@ -144,7 +144,7 @@ Simulacion de la Suma en Labsland
 ![suma](https://user-images.githubusercontent.com/62714712/80264594-41f56000-865a-11ea-91bc-5d2c65b4f091.png)
 
 
-Resta:
+RESTA:
 
 La resta se toma usando las dos botoneras cada vez que activamos un swich dependiendo de la posicion nos va arrojar un valor que se va ver reflejado en el display teniendo estos valores el boton B1 es el responsable de realizar la resta la implementacion se realizo con la linea de codigo siguiente.
 
@@ -167,7 +167,7 @@ if (op2==1)
    
 _______________________________________________________________________________________________________________________________
 
-MultiplicaciÃ³n 
+MULTIPLICACION
 
 DescripciÃ³n de la caja negra 
 
@@ -212,5 +212,208 @@ Resultado:
 ![divisionresul](https://user-images.githubusercontent.com/62714712/80266712-ebd8ea80-8662-11ea-9cec-4ddc695a6af2.png)
 
 
+______________________________________________________________________________________________________________________________
+
+
+CODIGO FINAL.
+
+
+module BCDtoSSeg (V_SW,G_HEX0,G_HEX1,G_HEX2,G_HEX3,V_BT);
+
+  input wire [9:0] V_SW;
+  input wire [3:0] V_BT;
+  output wire [6:0] G_HEX0;
+  output wire [6:0] G_HEX1;
+  output wire [6:0] G_HEX2;
+  output wire [6:0] G_HEX3;
+ 
+    reg [6:0] SSeg;
+    reg [6:0] SSeg1;
+    reg [6:0] SSeg2;
+    reg [6:0] SSeg3;
+    wire [4:0] BCD;
+    wire [4:0] BCD1;
+    //reg op1;
+    //reg op2;
+    //reg op3;
+    //reg op4;
+    reg [3:0] NM1;
+    reg [3:0] NM2;
+    reg [3:0] NM3;
+    reg [3:0] NM4;
+    reg [15:0] RTA;
+    reg [15:0] RTA1;
+    
+    
+    assign BCD = V_SW[4:0];
+    assign BCD1 = V_SW[9:5];
+    assign G_HEX0 = SSeg;
+    assign G_HEX1 = SSeg1;
+    assign G_HEX2 = SSeg2;
+    assign G_HEX3 = SSeg3;
+    assign op1 = V_BT[0];
+    assign op2 = V_BT[1];
+    assign op3 = V_BT[2];
+    assign op4 = V_BT[3];
+
+   // BCD= b00001111 and V_SW;
+
+
+ task info;
+      input [4:0] a;
+      input [4:0] b;
+    begin
+      RTA = a[3:0];
+      RTA = RTA+(16*a[4]);
+      RTA1 = b[3:0];
+      RTA1 = RTA1+(16*b[4]);
+      RTA1 =RTA1*100;
+      RTA =RTA1+RTA;
+      
+    end
+    endtask
+
+
+
+
+always @ ( * ) begin
+
+     if (op1==1)
+			RTA = BCD1+BCD;
+	else if (op2==1)
+	        if(BCD1>BCD)
+			RTA = BCD1-BCD;
+			else
+			RTA= 1000+(BCD-BCD1);
+		
+	else if (op3==1)
+	        if (BCD==0)
+			RTA =0;
+			else 
+			RTA=BCD1/BCD;
+			
+			
+	else if (op4==1)
+			RTA = BCD1*BCD;
+			
+			
+		else 
+			info(BCD,BCD1);
+		//	RTA=RTA<<8;
+		//	RTA=RTA | BCD;
+		
+		
+			/*NM4=RTA[15:12];
+			NM3=RTA[11:8];
+			NM2=RTA[7:4];
+			NM1=RTA[3:0];*/
+			
+	
+			
+			
+			
+	    
+	    NM4=RTA/1000;
+	    RTA=RTA%1000;
+        NM3=RTA/100;
+        RTA=RTA%100;
+        NM2=RTA/10;
+        NM1=RTA%10;;
+	
+    
+ 
+
+  case (NM1)
+   4'b0000: SSeg = 7'b1000000; // "0"  
+	4'b0001: SSeg = 7'b1111001; // "1" 
+	4'b0010: SSeg = 7'b0100100; // "2" 
+	4'b0011: SSeg = 7'b0110000; // "3" 
+	4'b0100: SSeg = 7'b0011001; // "4" 
+	4'b0101: SSeg = 7'b0010010; // "5" 
+	4'b0110: SSeg = 7'b0000010; // "6" 
+	4'b0111: SSeg = 7'b1111000; // "7" 
+	4'b1000: SSeg = 7'b0000000; // "8"  
+	4'b1001: SSeg = 7'b0010000; // "9" 
+   4'ha: SSeg = 7'b0001000;  
+   4'hb: SSeg = 7'b0000011;
+   4'hc: SSeg = 7'b1000110;
+   4'hd: SSeg = 7'b0100001;
+   4'he: SSeg = 7'b0000110;
+   4'hf: SSeg = 7'b0001110;
+    default:
+    SSeg = 0;
+  endcase
+  
+  
+  
+   case (NM2)
+   4'b0000: SSeg1 = 7'b1000000; // "0"  
+	4'b0001: SSeg1 = 7'b1111001; // "1" 
+	4'b0010: SSeg1 = 7'b0100100; // "2" 
+	4'b0011: SSeg1 = 7'b0110000; // "3" 
+	4'b0100: SSeg1 = 7'b0011001; // "4" 
+	4'b0101: SSeg1 = 7'b0010010; // "5" 
+	4'b0110: SSeg1 = 7'b0000010; // "6" 
+	4'b0111: SSeg1 = 7'b1111000; // "7" 
+	4'b1000: SSeg1 = 7'b0000000; // "8"  
+	4'b1001: SSeg1 = 7'b0010000; // "9" 
+   4'ha: SSeg1 = 7'b0001000;  
+   4'hb: SSeg1 = 7'b0000011;
+   4'hc: SSeg1 = 7'b1000110;
+   4'hd: SSeg1 = 7'b0100001;
+   4'he: SSeg1 = 7'b0000110;
+   4'hf: SSeg1 = 7'b0001110;
+    default:
+    SSeg1 = 0;
+  endcase
+  
+  case (NM3)
+   4'b0000: SSeg2 = 7'b1000000; // "0"  
+	4'b0001: SSeg2 = 7'b1111001; // "1" 
+	4'b0010: SSeg2 = 7'b0100100; // "2" 
+	4'b0011: SSeg2 = 7'b0110000; // "3" 
+	4'b0100: SSeg2 = 7'b0011001; // "4" 
+	4'b0101: SSeg2 = 7'b0010010; // "5" 
+	4'b0110: SSeg2 = 7'b0000010; // "6" 
+	4'b0111: SSeg2 = 7'b1111000; // "7" 
+	4'b1000: SSeg2 = 7'b0000000; // "8"  
+	4'b1001: SSeg2 = 7'b0010000; // "9" 
+   4'ha: SSeg2 = 7'b0001000;  
+   4'hb: SSeg2 = 7'b0000011;
+   4'hc: SSeg2 = 7'b1000110;
+   4'hd: SSeg2 = 7'b0100001;
+   4'he: SSeg2 = 7'b0000110;
+   4'hf: SSeg2 = 7'b0001110;
+    default:
+    SSeg2 = 0;
+  endcase
+  
+  case (NM4)
+   4'b0000: SSeg3 = 7'b1000000; // "0"  
+	4'b0001: SSeg3 = 7'b1111001; // "1" 
+	4'b0010: SSeg3 = 7'b0100100; // "2" 
+	4'b0011: SSeg3 = 7'b0110000; // "3" 
+	4'b0100: SSeg3 = 7'b0011001; // "4" 
+	4'b0101: SSeg3 = 7'b0010010; // "5" 
+	4'b0110: SSeg3 = 7'b0000010; // "6" 
+	4'b0111: SSeg3 = 7'b1111000; // "7" 
+	4'b1000: SSeg3 = 7'b0000000; // "8"  
+	4'b1001: SSeg3 = 7'b0010000; // "9" 
+   4'ha: SSeg3 = 7'b0001000;  
+   4'hb: SSeg3 = 7'b0000011;
+   4'hc: SSeg3 = 7'b1000110;
+   4'hd: SSeg3 = 7'b0100001;
+   4'he: SSeg3 = 7'b0000110;
+   4'hf: SSeg3 = 7'b0001110;
+    default:    SSeg3 = 0;
+  endcase
+  
+end
+
+
+
+
+
+endmodule
 
 
