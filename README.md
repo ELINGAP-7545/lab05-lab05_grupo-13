@@ -9,21 +9,21 @@ ______________________________________________________________________________
 
 
 
-# lab05 : Unidad de suma, resta, multiplicaciÃƒÂ³n, divisiÃƒÂ³n y visualizaciÃƒÂ³n BCD
-## IntroducciÃƒÂ³n
+# lab05 : Unidad de suma, resta, multiplicaci�n, divisi�n y visualizaci�n BCD
+## Introducci�n
 
 
-Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la informaciÃƒÂ³n del siguiente link [WP05](https://classroom.github.com/g/dHrBou9a). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe cÃƒÂ³mo hacerlo revise la metodologÃƒÂ­a de trabajo, donde se explica el proceso
+Para este paquete de trabajo, deben estar inscrito en un grupo y clonar la informaci�n del siguiente link [WP05](https://classroom.github.com/g/dHrBou9a). Una vez aceptado el repositorio debe descargarlo en su computador, para ello debe clonar el mismo. Si no sabe c�mo hacerlo revise la metodolog�a de trabajo, donde se explica el proceso
 
-Las documentaciÃƒÂ³n deben estar diligencia en el archivo README.md del repositorio clonado.
+Las documentaci�n deben estar diligencia en el archivo README.md del repositorio clonado.
 
 Una vez clone el repositorio, realice lo siguiente:
 
 
-## descipciÃƒÂ³n 
-La unidad aritmÃƒÂ©tica, es tal que cuenta con componentes para realizar operaciones aritmÃƒÂ©ticas. cada operaciÃƒÂ³n aritmÃƒÂ©tica es ejecutada acuerdo al cÃƒÂ³digo de la operaciÃƒÂ³n. 
+## descipci�n 
+La unidad aritm�tica, es tal que cuenta con componentes para realizar operaciones aritm�ticas. cada operaci�n aritm�tica es ejecutada acuerdo al c�digo de la operaci�n. 
 
-Como ejercicio acadÃƒÂ©mico, se propone construye una unidad con 4 operaciones aritmÃƒÂ©ticas: suma, resta, multiplicaciÃƒÂ³n y divisiÃƒÂ³n.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selecciÃƒÂ³n de la operaciÃƒÂ³n se realiza acorde a la seÃƒÂ±al opcode, y segun la siguiente tabla:
+Como ejercicio acad�mico, se propone construye una unidad con 4 operaciones aritm�ticas: suma, resta, multiplicaci�n y divisi�n.  de igual manera, el resultados se visualiza en los display de siete segmentos. El flujo de datos y la selecci�n de la operaci�n se realiza acorde a la se�al opcode, y segun la siguiente tabla:
 
 
 opcode | operacion enteros positivos
@@ -35,14 +35,14 @@ opcode | operacion enteros positivos
 Por lo tanto, la unidad debe contar con:
 
 1. Los dos puertos de entrada A y B. cada uno de  3 bits.
-2. La seÃƒÂ±al `opcode` de dos bits, para configurar la operaciÃƒÂ³n que se realiza con los datos de `portA` y `portB`.
-3. La a visualizaciÃƒÂ³n de unidad debe tener las salidas de los 4 ÃƒÂ¡nodos, `An`  y las 7 seÃƒÂ±ales de los cÃƒÂ¡todos, `sseg`.
-4. Para las FSM  y las visualizaciÃƒÂ³n dinÃƒÂ¡mica, se debe incluir la seÃƒÂ±al de `clk` de entrada.
-5. la seÃƒÂ±al de reset del sistema
+2. La se�al `opcode` de dos bits, para configurar la operaci�n que se realiza con los datos de `portA` y `portB`.
+3. La a visualizaci�n de unidad debe tener las salidas de los 4�nodos, `An`  y las 7 se�ales de los cÃƒÂ¡todos, `sseg`.
+4. Para las FSM  y las visualizaciÃƒÂ³n din�mica, se debe incluir la se�al de `clk` de entrada.
+5. la se�al de reset del sistema
 
 ## Diagrama de caja negra
 
-SegÃƒÂºn las especificaciones anteriormente descrita, la caja funcional de la unidad aritmÃƒÂ©tica propuesta es:
+Seg�n las especificaciones anteriormente descrita, la caja funcional de la unidad aritmetica propuesta es:
 
 ![caja negra](https://github.com/Fabeltranm/SPARTAN6-ATMEGA-MAX5864/blob/master/lab/lab06_Unidad_aritmetica/doc/cajanegra.png)
 
@@ -169,16 +169,16 @@ ________________________________________________________________________________
 
 MULTIPLICACION
 
-DescripciÃ³n de la caja negra 
+Descripci�n de la caja negra 
 
 
 ![multiplicador 1](https://user-images.githubusercontent.com/62735033/80259075-5c274200-864a-11ea-86d6-7213e712b1ae.png)
 
-DescripciÃ³n funcional
+Descripci�n funcional
 
 ![descripcion multiplicador](https://user-images.githubusercontent.com/62735033/80259868-2edb9380-864c-11ea-8324-6246cf336cdd.png)
 
-Simulacion de la multiplicación en Labsland
+Simulacion de la multiplicaci�n en Labsland
 
 ![imagen 2](https://user-images.githubusercontent.com/62735033/80266526-f9da3b80-8661-11ea-93be-6161af097d6d.png)
 
