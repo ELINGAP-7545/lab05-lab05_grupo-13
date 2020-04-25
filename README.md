@@ -218,14 +218,14 @@ ________________________________________________________________________________
 CODIGO FINAL.
 
 
-module BCDtoSSeg (V_SW,G_HEX0,G_HEX1,G_HEX2,G_HEX3,V_BT);
+    module BCDtoSSeg (V_SW,G_HEX0,G_HEX1,G_HEX2,G_HEX3,V_BT);
 
-  input wire [9:0] V_SW;
-  input wire [3:0] V_BT;
-  output wire [6:0] G_HEX0;
-  output wire [6:0] G_HEX1;
-  output wire [6:0] G_HEX2;
-  output wire [6:0] G_HEX3;
+    input wire [9:0] V_SW;
+    input wire [3:0] V_BT;
+    output wire [6:0] G_HEX0;
+    output wire [6:0] G_HEX1;
+    output wire [6:0] G_HEX2;
+    output wire [6:0] G_HEX3;
  
     reg [6:0] SSeg;
     reg [6:0] SSeg1;
@@ -256,10 +256,10 @@ module BCDtoSSeg (V_SW,G_HEX0,G_HEX1,G_HEX2,G_HEX3,V_BT);
     assign op3 = V_BT[2];
     assign op4 = V_BT[3];
 
-   // BCD= b00001111 and V_SW;
+    // BCD= b00001111 and V_SW;
 
 
- task info;
+    task info;
       input [4:0] a;
       input [4:0] b;
     begin
@@ -323,9 +323,9 @@ always @ ( * ) begin
     
  
 
-  case (NM1)
-   4'b0000: SSeg = 7'b1000000; // "0"  
-	4'b0001: SSeg = 7'b1111001; // "1" 
+     case (NM1)
+      4'b0000: SSeg = 7'b1000000; // "0"  
+	 4'b0001: SSeg = 7'b1111001; // "1" 
 	4'b0010: SSeg = 7'b0100100; // "2" 
 	4'b0011: SSeg = 7'b0110000; // "3" 
 	4'b0100: SSeg = 7'b0011001; // "4" 
@@ -333,21 +333,21 @@ always @ ( * ) begin
 	4'b0110: SSeg = 7'b0000010; // "6" 
 	4'b0111: SSeg = 7'b1111000; // "7" 
 	4'b1000: SSeg = 7'b0000000; // "8"  
-	4'b1001: SSeg = 7'b0010000; // "9" 
-   4'ha: SSeg = 7'b0001000;  
-   4'hb: SSeg = 7'b0000011;
-   4'hc: SSeg = 7'b1000110;
-   4'hd: SSeg = 7'b0100001;
-   4'he: SSeg = 7'b0000110;
-   4'hf: SSeg = 7'b0001110;
+ 	4'b1001: SSeg = 7'b0010000; // "9" 
+    4'ha: SSeg = 7'b0001000;  
+    4'hb: SSeg = 7'b0000011;
+    4'hc: SSeg = 7'b1000110;
+     4'hd: SSeg = 7'b0100001;
+     4'he: SSeg = 7'b0000110;
+    4'hf: SSeg = 7'b0001110;
     default:
     SSeg = 0;
-  endcase
+    endcase
   
   
   
-   case (NM2)
-   4'b0000: SSeg1 = 7'b1000000; // "0"  
+    case (NM2)
+    4'b0000: SSeg1 = 7'b1000000; // "0"  
 	4'b0001: SSeg1 = 7'b1111001; // "1" 
 	4'b0010: SSeg1 = 7'b0100100; // "2" 
 	4'b0011: SSeg1 = 7'b0110000; // "3" 
@@ -357,18 +357,18 @@ always @ ( * ) begin
 	4'b0111: SSeg1 = 7'b1111000; // "7" 
 	4'b1000: SSeg1 = 7'b0000000; // "8"  
 	4'b1001: SSeg1 = 7'b0010000; // "9" 
-   4'ha: SSeg1 = 7'b0001000;  
-   4'hb: SSeg1 = 7'b0000011;
-   4'hc: SSeg1 = 7'b1000110;
-   4'hd: SSeg1 = 7'b0100001;
-   4'he: SSeg1 = 7'b0000110;
-   4'hf: SSeg1 = 7'b0001110;
-    default:
+    4'ha: SSeg1 = 7'b0001000;  
+    4'hb: SSeg1 = 7'b0000011;
+    4'hc: SSeg1 = 7'b1000110;
+    4'hd: SSeg1 = 7'b0100001;
+    4'he: SSeg1 = 7'b0000110;
+    4'hf: SSeg1 = 7'b0001110;
+     default:
     SSeg1 = 0;
-  endcase
+    endcase
   
-  case (NM3)
-   4'b0000: SSeg2 = 7'b1000000; // "0"  
+    case (NM3)
+    4'b0000: SSeg2 = 7'b1000000; // "0"  
 	4'b0001: SSeg2 = 7'b1111001; // "1" 
 	4'b0010: SSeg2 = 7'b0100100; // "2" 
 	4'b0011: SSeg2 = 7'b0110000; // "3" 
@@ -378,19 +378,19 @@ always @ ( * ) begin
 	4'b0111: SSeg2 = 7'b1111000; // "7" 
 	4'b1000: SSeg2 = 7'b0000000; // "8"  
 	4'b1001: SSeg2 = 7'b0010000; // "9" 
-   4'ha: SSeg2 = 7'b0001000;  
-   4'hb: SSeg2 = 7'b0000011;
-   4'hc: SSeg2 = 7'b1000110;
-   4'hd: SSeg2 = 7'b0100001;
-   4'he: SSeg2 = 7'b0000110;
-   4'hf: SSeg2 = 7'b0001110;
+    4'ha: SSeg2 = 7'b0001000;  
+    4'hb: SSeg2 = 7'b0000011;
+    4'hc: SSeg2 = 7'b1000110;
+    4'hd: SSeg2 = 7'b0100001;
+    4'he: SSeg2 = 7'b0000110;
+    4'hf: SSeg2 = 7'b0001110;
     default:
     SSeg2 = 0;
-  endcase
+    endcase
   
-  case (NM4)
-   4'b0000: SSeg3 = 7'b1000000; // "0"  
-	4'b0001: SSeg3 = 7'b1111001; // "1" 
+    case (NM4)
+    4'b0000: SSeg3 = 7'b1000000; // "0"  
+	 4'b0001: SSeg3 = 7'b1111001; // "1" 
 	4'b0010: SSeg3 = 7'b0100100; // "2" 
 	4'b0011: SSeg3 = 7'b0110000; // "3" 
 	4'b0100: SSeg3 = 7'b0011001; // "4" 
@@ -399,21 +399,21 @@ always @ ( * ) begin
 	4'b0111: SSeg3 = 7'b1111000; // "7" 
 	4'b1000: SSeg3 = 7'b0000000; // "8"  
 	4'b1001: SSeg3 = 7'b0010000; // "9" 
-   4'ha: SSeg3 = 7'b0001000;  
-   4'hb: SSeg3 = 7'b0000011;
-   4'hc: SSeg3 = 7'b1000110;
-   4'hd: SSeg3 = 7'b0100001;
-   4'he: SSeg3 = 7'b0000110;
-   4'hf: SSeg3 = 7'b0001110;
-    default:    SSeg3 = 0;
-  endcase
+    4'ha: SSeg3 = 7'b0001000;  
+    4'hb: SSeg3 = 7'b0000011;
+    4'hc: SSeg3 = 7'b1000110;
+    4'hd: SSeg3 = 7'b0100001;
+    4'he: SSeg3 = 7'b0000110;
+    4'hf: SSeg3 = 7'b0001110;
+     default:    SSeg3 = 0;
+    endcase
   
-end
+     end
 
 
 
 
 
-endmodule
+     endmodule
 
 
