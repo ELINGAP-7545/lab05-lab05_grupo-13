@@ -84,27 +84,72 @@ Opcode:Las posibles operaciones arimeticas que se pueden ejecutar en la ALU.
 
 ![TABLA](https://user-images.githubusercontent.com/62714712/80263655-ebd2ed80-8656-11ea-9d18-427c406b2630.png)
 
+![principio](https://user-images.githubusercontent.com/62714712/80266493-da431300-8661-11ea-9c98-7519a86c875a.png)
+
+Este código lo utilizamos para colocar los números que le ingresamos.
+Se llama la función y en ella se le envía información, en este caso la información que recibe es:
+A= 5bits
+B= 5 bits
+Como están en base hexadecimal (16), lo que se realiza es una conversión 
+Ej: 10110 =22
+Los primero 4 se toman normal 0110 =6
+El 5 bit se multiplica por 16; si el 5 bit es 1 obtendremos 16 sino será 0. En este caso tenemos 0001=16
+Después de ello sumamos y obtenemos
+16+6 =22
+El mismo ejercicio se realiza con el numero b, pero este al final se multiplica por 100, si tomamos el ejemplo anterior tendríamos 22*100=2200
+B=2200
+
+Y lo que realizamos al final es sumar los dos para obtener un solo número
+RTA=a+b ; 
+RTA=2200+22 
+RTA = 2222
+Y este es el proceso de acomodar los bits de entrada en el display
+
+________________________________________________________________________________________________________________________________
+
 Diagrama Estructural de la SUMA.
 
 
 ![Sumador](https://user-images.githubusercontent.com/62714712/80239337-ac3fdd80-8625-11ea-9c20-ee2d953edb7e.png)
 
-Caja Negra de 3 bits
 
-![sumador3](https://user-images.githubusercontent.com/62714712/80239725-5881c400-8626-11ea-8c2b-0549f57023b2.png)
-
-Instanciamiento de 3 bits 
-
-![sumador3bits](https://user-images.githubusercontent.com/62714712/80239338-acd87400-8625-11ea-9ad2-5c5185210bfc.png)
 
 Diagrama De Flujo
 
 ![Proceso de soporte tÃ©cnico](https://user-images.githubusercontent.com/62714712/80242997-f330d180-862b-11ea-860f-2cba9749ed28.png)
 
+Se activan los display automaticamente  y los swich de la parte superiror e inferior son los que me van arrojar un valor a los display dicho valor va ser tomado por el boton B0 y va realizar una suma para realizar la suma implementamos la linea siguiente 
+
+
+     if (op1==1)
+			RTA = BCD1+BCD;
+   
 Simulacion de la Suma en Labsland
 
 ![suma](https://user-images.githubusercontent.com/62714712/80264594-41f56000-865a-11ea-91bc-5d2c65b4f091.png)
 
+
+Resta:
+
+La resta se toma usando las dos botoneras cada vez que activamos un swich dependiendo de la posicion nos va arrojar un valor que se va ver reflejado en el display teniendo estos valores el boton B1 es el responsable de realizar la resta la implementacion se realizo con la linea de codigo siguiente.
+
+Valores ingresados 
+
+![digitos](https://user-images.githubusercontent.com/62714712/80266649-a5838b80-8662-11ea-94d2-dc20df0e55fe.png)
+
+if (op2==1)
+	        if(BCD1>BCD)
+			RTA = BCD1-BCD;
+			else
+			RTA= 1000+(BCD-BCD1);
+			
+   Resultado: 
+   
+   
+   ![resta](https://user-images.githubusercontent.com/62714712/80266267-93085280-8660-11ea-87cd-b0357635db41.png)
+
+
+   
 _______________________________________________________________________________________________________________________________
 
 Multiplicación 
@@ -124,6 +169,34 @@ Simulacion de la multiplicaci�n en Labsland
 ![imagen 2](https://user-images.githubusercontent.com/62735033/80266526-f9da3b80-8661-11ea-93be-6161af097d6d.png)
 
 
+________________________________________________________________________________________________________________________________
+
+DIVISION:
+
+Para activar la division usamos la siguiente linea
+
+assign op3 = V_BT[2]; eso quiere que la division se activa cuando pulsamos el Boton 2
+
+Para realizar la division usamos la siguiente lineas
+
+if (op3==1)
+	        if (BCD==0)
+			RTA =0;
+			else 
+			RTA=BCD1/BCD;
+			
 
 
- 
+Valores ingresados.
+
+
+![division](https://user-images.githubusercontent.com/62714712/80266711-ea0f2700-8662-11ea-9e60-522c27074aeb.png)
+
+
+Resultado:
+
+![divisionresul](https://user-images.githubusercontent.com/62714712/80266712-ebd8ea80-8662-11ea-9cec-4ddc695a6af2.png)
+
+
+
+
