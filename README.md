@@ -119,6 +119,10 @@ DescripciÃ³n funcional
 
 ![descripcion multiplicador](https://user-images.githubusercontent.com/62735033/80259868-2edb9380-864c-11ea-8324-6246cf336cdd.png)
 
+Simulacion de la multiplicación en Labsland
+
+![imagen 2](https://user-images.githubusercontent.com/62735033/80266526-f9da3b80-8661-11ea-93be-6161af097d6d.png)
+
 
 
 
