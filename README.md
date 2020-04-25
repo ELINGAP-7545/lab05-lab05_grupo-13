@@ -105,7 +105,7 @@ RTA=2200+22
 RTA = 2222
 Y este es el proceso de acomodar los bits de entrada en el display
 
-
+________________________________________________________________________________________________________________________________
 
 Diagrama Estructural de la SUMA.
 
