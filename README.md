@@ -171,7 +171,6 @@ MultiplicaciÃ³n
 
 DescripciÃ³n de la caja negra 
 
-La caja funcional o caja negra tiene como entradas multiplicando y el multiplicadorÂ (A y B), seÃ±ales deÂ mÂ bits cada una. la salida es el resultado de la multiplicaciÃ³nÂ PPÂ (Bus de 2m Bits). AdemÃ¡s, la seÃ±al de reloj (CLOCK), entrada. Las seÃ±alesÂ INITÂ yÂ DONE, entrada y salida, se utilizan para iniciar el proceso de multiplicaciÃ³n e indicar que el resultado estÃ¡ a disponible respectivamente
 
 ![multiplicador 1](https://user-images.githubusercontent.com/62735033/80259075-5c274200-864a-11ea-86d6-7213e712b1ae.png)
 
