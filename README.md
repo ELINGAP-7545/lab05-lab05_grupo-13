@@ -152,7 +152,7 @@ Valores ingresados
 
 ![digitos](https://user-images.githubusercontent.com/62714712/80266649-a5838b80-8662-11ea-94d2-dc20df0e55fe.png)
 
-if (op2==1)
+     if (op2==1)
 	        if(BCD1>BCD)
 			RTA = BCD1-BCD;
 			else
@@ -193,7 +193,7 @@ assign op3 = V_BT[2]; eso quiere que la division se activa cuando pulsamos el Bo
 
 Para realizar la division usamos la siguiente lineas
 
-if (op3==1)
+       if (op3==1)
 	        if (BCD==0)
 			RTA =0;
 			else 
